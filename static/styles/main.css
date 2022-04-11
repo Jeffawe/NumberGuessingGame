@@ -1,0 +1,23 @@
+.NumberGuessing-text-mobile {
+    display: none;
+}
+
+@media only screen and (max-device-width: 1000px) {
+    .page {
+        display: none;
+    }
+
+    .NumberGuessing-text-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10rem 2rem;
+        height: 100rem;
+
+    }
+
+    .NumberGuessing-text-mobile h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+}
