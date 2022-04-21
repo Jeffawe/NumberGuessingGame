@@ -13,6 +13,8 @@
             <article class="tile is-child notification is-info">
                  <form action="/new" method = "POST" autocomplete="off">
                      <h1 class="is-size-3 has-text-centered has-text-weight-bold">GUESS THE NUMBER</h1>
+
+                     <h1 class="is-size-4 has-text-centered has-text-weight-bold">Your Score is {{score}}</h1>
                      <br>
                      <br>
                      <br>
@@ -24,21 +26,37 @@
                          </div>
                      </div>
 
+                     {% if button_show == 0 %}
                      <div class="field">
                          <div class="control" style="text-align:center;">
                             <button class="button is-primary is-small is-rounded" type="submit">Guess</button>
                         </div>
                      </div>
+                     {% endif %}
+                 </form>
+
+                     <br>
+
+                     <form action="/continue" autocomplete="off">
+                         {% if button_show == 1 %}
+                         <div class="field">
+                             <div class="control" style="text-align:center;">
+                                <button class="button is-primary is-small is-rounded" type="submit">Continue</button>
+                            </div>
+                        </div>
+                         {% endif %}
+                     </form>
 
                      <div class="field">
                          <p class="is-size-5 has-text-centered has-text-weight-light"> {{msg}} </p>
+                         {% if tries < 5 %}
+                         <p class="is-size-5 has-text-centered has-text-weight-light"> You have {{tries}} tries left</p>
+                         {% endif %}
                          <p class="is-size-5 has-text-centered has-text-weight-light has-text-primary-light"> {{numG}} </p>
                          <p class="is-size-5 has-text-centered has-text-weight-light has-text-danger-dark"> {{numB}} </p>
                      </div>
 
                      <br>
-
-                 </form>
 
 
                 <form action="/">
