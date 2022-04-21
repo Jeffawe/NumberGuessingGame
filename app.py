@@ -37,7 +37,7 @@ def home():
     session['n'] = 0
     session['guess_count'] = 0
     session['guess_limit'] = 5
-    session['tries'] = 7
+    session['tries'] = 6
     session['score'] = 0
     session['button_show'] = 0
 
@@ -49,7 +49,7 @@ def restart():
     session['n'] = 0
     session['guess_count'] = 0
     session['guess_limit'] = 5
-    session['tries'] = 7
+    session['tries'] = 6
     session['button_show'] = 0
 
     return render_template("index.html")

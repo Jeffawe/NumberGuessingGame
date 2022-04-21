@@ -49,8 +49,8 @@
 
                      <div class="field">
                          <p class="is-size-5 has-text-centered has-text-weight-light"> {{msg}} </p>
-                         {% if tries < 7 %}
-                         <p class="is-size-5 has-text-centered has-text-weight-light"> You have {{tries}} tries left</p>
+                         {% if tries < 6 %}
+                         <p class="is-size-5 has-text-centered has-text-weight-light"> You have {{tries}} guess(es) left</p>
                          {% endif %}
                          <p class="is-size-5 has-text-centered has-text-weight-light has-text-primary-light"> {{numG}} </p>
                          <p class="is-size-5 has-text-centered has-text-weight-light has-text-danger-dark"> {{numB}} </p>
